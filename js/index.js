@@ -24,7 +24,7 @@ var S = {
     if (i !== -1) {
       S.UI.simulate(decodeURI(action).substring(i + 3));
     } else {
-      S.UI.simulate('|孙羽轩|生日快乐');
+      S.UI.simulate('|孙羽轩|生日快乐|Happy birthday');
     }
 
     S.Drawing.loop(function () {
@@ -206,7 +206,7 @@ S.UI = (function () {
         default:
           S.Shape.switchShape(S.ShapeBuilder.letter(current[0] === cmd ? 'What?' : current));
       }
-    }, 1000, sequence.length);
+    }, 750, sequence.length);
   }
 
   function checkInputWidth(e) {
